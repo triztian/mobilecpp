@@ -9,16 +9,15 @@
 #include "linkmobile.hpp"
 
 /**
+ * Add 2 ints.
  */
 int sum(const int a, const int b) {
     return a + b;
 }
 
 /**
+ * Return a new string by concatenating 2.
  */
 char* concat(const char* a, const char* const b) {
-    std::string v = "using a string";
-    const char* t = v.c_str();
-//    char* x = t;
-    return (char*)t;
+    return (char*)(std::string(a) + std::string(b)).c_str();
 }

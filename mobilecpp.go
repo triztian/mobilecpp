@@ -1,9 +1,12 @@
 package mobilecpp
 
-// #cgo LDFLAGS: -L . -l LinkMobile
-// #cgo CXXFLAGS: -std=gnu++11 -stdlib=libc++
-//
-// extern int sum(int a, int b);
+/*
+#cgo LDFLAGS: -L . -l LinkMobile
+#cgo CXXFLAGS: -std=gnu++11 -stdlib=libc++
+
+extern int sum(int a, int b);
+extern char* concat(const char* a, const char* b);
+*/
 import "C"
 
 // Sum ...
