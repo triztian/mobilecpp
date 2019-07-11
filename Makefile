@@ -1,10 +1,15 @@
+.PHONY: libLinkMobile
 
 Mobilecpp.framework:
-	gomobile bind -target=ios/arm,ios/arm64,ios/amd64 github.com/triztian/mobilecpp
+	#gomobilex bind -target=ios/arm,ios/arm64 github.com/triztian/mobilecpp
+	gomobilex bind -target=ios/arm,ios/arm64 github.com/triztian/mobilecpp
+	#gomobilex bind -target=ios github.com/triztian/mobilecpp
 
-libLinkMobile.a:
-	xcodebuild -project liblinkmobile/LinkMobile.xcodeproj -target LinkMobile -configuration Debug build
-	find . -name libLinkMobile.a -exec cp -v {} ./ \;
+libLinkMobile:
+	xcodebuild -project liblinkmobile/LinkMobile.xcodeproj -alltargets -configuration Release build
+	find . -name 'libLinkMobile.*.a' -exec cp -v {} ./ \;
+	lipo -archs libLinkMobile.ios.a
+	lipo -archs libLinkMobile.osx.a
 
 clean:
-	@rm -fv libLinkMobile.a
+	@rm -fvr libLinkMobile.a Mobilecpp.framework

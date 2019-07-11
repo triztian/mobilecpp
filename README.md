@@ -1,6 +1,11 @@
 # golang/go: issue 
 
-This projects aims to reproduce i
+This projects aims to reproduce an issue when linking C++ code using gomobile
+
+Basically the project consists of the following:
+
+ * A arm64, armv7 static library that will provide 3 functions
+ * 2 Go functions that use the external provided functions
 
 
 ### Building Mobilecpp.framework

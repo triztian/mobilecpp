@@ -19,6 +19,7 @@ extern "C" {
     
     char* concat(const char* a, const char* const b);
     
+    char* exception(const char* msg);
 }
 
 #endif /* linkmobile_hpp */

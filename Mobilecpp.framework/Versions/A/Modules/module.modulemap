@@ -1,0 +1,8 @@
+framework module "Mobilecpp" {
+	header "ref.h"
+    header "Mobilecpp.objc.h"
+    header "Universe.objc.h"
+    header "Mobilecpp.h"
+
+    export *
+}
