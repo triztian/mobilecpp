@@ -2,8 +2,8 @@
 
 Mobilecpp.framework:
 	#gomobilex bind -target=ios/arm,ios/arm64 github.com/triztian/mobilecpp
-	gomobilex bind -target=ios/arm,ios/arm64,ios/amd64 github.com/triztian/mobilecpp
-	#gomobilex bind -target=ios github.com/triztian/mobilecpp
+	# gomobilex bind -target=ios/arm,ios/arm64,ios/amd64 github.com/triztian/mobilecpp
+	gomobilex bind -target=ios github.com/triztian/mobilecpp
 
 libLinkMobile:
 	xcodebuild -project liblinkmobile/LinkMobile.xcodeproj \
