@@ -2,7 +2,7 @@ package mobilecpp
 
 /*
 #cgo CXXFLAGS: -v -std=gnu++11 -stdlib=libc++
-#cgo LDFLAGS: -L . -l LinkMobile.osx -l LinkMobile.ios
+#cgo LDFLAGS: -L . -l LinkMobile.universal
 
 extern int sum(int a, int b);
 extern char* concat(const char* a, const char* b);
